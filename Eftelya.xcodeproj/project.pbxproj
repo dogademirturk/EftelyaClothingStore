@@ -16,6 +16,7 @@
 		AA4BC6AF2B3F72DA0000B78A /* ProductDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */; };
 		AA4BC6B22B3F77ED0000B78A /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */; };
 		AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B52B3F79C00000B78A /* ProductRow.swift */; };
+		AA4BC6B82B3F83B30000B78A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B72B3F83B30000B78A /* AboutView.swift */; };
 		AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */; };
 		AAE0E7092B3F4B3200EBF2FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */; };
 		AAE0E70B2B3F4B3300EBF2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0E70A2B3F4B3300EBF2FD /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSourceDelegate.swift; sourceTree = "<group>"; };
 		AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		AA4BC6B52B3F79C00000B78A /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		AA4BC6B72B3F83B30000B78A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eftelya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EftelyaApp.swift; sourceTree = "<group>"; };
 		AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		AA07D3262B3F665800081C25 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				AA4BC6B72B3F83B30000B78A /* AboutView.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				AAE0E7262B3F54EA00EBF2FD /* TextFieldDS.swift in Sources */,
 				AA4BC6A52B3F6E8E0000B78A /* ProductDataSource.swift in Sources */,
 				AAE0E72B2B3F5F4F00EBF2FD /* SignUpView.swift in Sources */,
+				AA4BC6B82B3F83B30000B78A /* AboutView.swift in Sources */,
 				AA4BC6AD2B3F70FF0000B78A /* HomeViewModel.swift in Sources */,
 				AAE0E7282B3F5E9800EBF2FD /* InputText.swift in Sources */,
 			);
