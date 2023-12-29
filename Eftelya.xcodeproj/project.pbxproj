@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA07D3242B3F62C000081C25 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07D3232B3F62C000081C25 /* SignUpViewModel.swift */; };
+		AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */; };
+		AAE0E7092B3F4B3200EBF2FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */; };
+		AAE0E70B2B3F4B3300EBF2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0E70A2B3F4B3300EBF2FD /* Assets.xcassets */; };
+		AAE0E70F2B3F4B3300EBF2FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0E70E2B3F4B3300EBF2FD /* Preview Assets.xcassets */; };
+		AAE0E71C2B3F4D9200EBF2FD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E71B2B3F4D9100EBF2FD /* LoginViewModel.swift */; };
+		AAE0E7202B3F4FB600EBF2FD /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E71F2B3F4FB600EBF2FD /* Spacing.swift */; };
+		AAE0E7222B3F50E700EBF2FD /* ButtonDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7212B3F50E700EBF2FD /* ButtonDS.swift */; };
+		AAE0E7242B3F510500EBF2FD /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7232B3F510500EBF2FD /* Radius.swift */; };
+		AAE0E7262B3F54EA00EBF2FD /* TextFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7252B3F54EA00EBF2FD /* TextFieldDS.swift */; };
+		AAE0E7282B3F5E9800EBF2FD /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7272B3F5E9800EBF2FD /* InputText.swift */; };
+		AAE0E72B2B3F5F4F00EBF2FD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E72A2B3F5F4F00EBF2FD /* SignUpView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA07D3232B3F62C000081C25 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eftelya.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EftelyaApp.swift; sourceTree = "<group>"; };
+		AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AAE0E70A2B3F4B3300EBF2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAE0E70C2B3F4B3300EBF2FD /* Eftelya.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eftelya.entitlements; sourceTree = "<group>"; };
+		AAE0E70E2B3F4B3300EBF2FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAE0E71B2B3F4D9100EBF2FD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AAE0E71F2B3F4FB600EBF2FD /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		AAE0E7212B3F50E700EBF2FD /* ButtonDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDS.swift; sourceTree = "<group>"; };
+		AAE0E7232B3F510500EBF2FD /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
+		AAE0E7252B3F54EA00EBF2FD /* TextFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDS.swift; sourceTree = "<group>"; };
+		AAE0E7272B3F5E9800EBF2FD /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
+		AAE0E72A2B3F5F4F00EBF2FD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAE0E7002B3F4B3200EBF2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA07D3252B3F663800081C25 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AA07D3262B3F665800081C25 /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		AA07D3272B3F665E00081C25 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		AA07D3282B3F666D00081C25 /* UserInformation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		AAE0E6FA2B3F4B3200EBF2FD = {
+			isa = PBXGroup;
+			children = (
+				AAE0E7052B3F4B3200EBF2FD /* Eftelya */,
+				AAE0E7042B3F4B3200EBF2FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAE0E7042B3F4B3200EBF2FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAE0E7052B3F4B3200EBF2FD /* Eftelya */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0E7192B3F4D5800EBF2FD /* DataSource */,
+				AAE0E7182B3F4D5000EBF2FD /* Model */,
+				AAE0E7162B3F4D1E00EBF2FD /* DesignSystem */,
+				AAE0E7152B3F4D1600EBF2FD /* Views */,
+				AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */,
+				AAE0E70A2B3F4B3300EBF2FD /* Assets.xcassets */,
+				AAE0E70C2B3F4B3300EBF2FD /* Eftelya.entitlements */,
+				AAE0E70D2B3F4B3300EBF2FD /* Preview Content */,
+			);
+			path = Eftelya;
+			sourceTree = "<group>";
+		};
+		AAE0E70D2B3F4B3300EBF2FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0E70E2B3F4B3300EBF2FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAE0E7152B3F4D1600EBF2FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA07D3282B3F666D00081C25 /* UserInformation */,
+				AA07D3272B3F665E00081C25 /* ProductDetail */,
+				AA07D3262B3F665800081C25 /* About */,
+				AA07D3252B3F663800081C25 /* Home */,
+				AAE0E7292B3F5F4200EBF2FD /* SignUp */,
+				AAE0E7172B3F4D3000EBF2FD /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AAE0E7162B3F4D1E00EBF2FD /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0E71F2B3F4FB600EBF2FD /* Spacing.swift */,
+				AAE0E7212B3F50E700EBF2FD /* ButtonDS.swift */,
+				AAE0E7232B3F510500EBF2FD /* Radius.swift */,
+				AAE0E7252B3F54EA00EBF2FD /* TextFieldDS.swift */,
+				AAE0E7272B3F5E9800EBF2FD /* InputText.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		AAE0E7172B3F4D3000EBF2FD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */,
+				AAE0E71B2B3F4D9100EBF2FD /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AAE0E7182B3F4D5000EBF2FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AAE0E7192B3F4D5800EBF2FD /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		AAE0E7292B3F5F4200EBF2FD /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0E72A2B3F5F4F00EBF2FD /* SignUpView.swift */,
+				AA07D3232B3F62C000081C25 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAE0E7022B3F4B3200EBF2FD /* Eftelya */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAE0E7122B3F4B3300EBF2FD /* Build configuration list for PBXNativeTarget "Eftelya" */;
+			buildPhases = (
+				AAE0E6FF2B3F4B3200EBF2FD /* Sources */,
+				AAE0E7002B3F4B3200EBF2FD /* Frameworks */,
+				AAE0E7012B3F4B3200EBF2FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eftelya;
+			productName = Eftelya;
+			productReference = AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAE0E6FB2B3F4B3200EBF2FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AAE0E7022B3F4B3200EBF2FD = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = AAE0E6FE2B3F4B3200EBF2FD /* Build configuration list for PBXProject "Eftelya" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAE0E6FA2B3F4B3200EBF2FD;
+			productRefGroup = AAE0E7042B3F4B3200EBF2FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAE0E7022B3F4B3200EBF2FD /* Eftelya */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAE0E7012B3F4B3200EBF2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE0E70F2B3F4B3300EBF2FD /* Preview Assets.xcassets in Resources */,
+				AAE0E70B2B3F4B3300EBF2FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAE0E6FF2B3F4B3200EBF2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE0E7092B3F4B3200EBF2FD /* LoginView.swift in Sources */,
+				AAE0E7202B3F4FB600EBF2FD /* Spacing.swift in Sources */,
+				AA07D3242B3F62C000081C25 /* SignUpViewModel.swift in Sources */,
+				AAE0E7222B3F50E700EBF2FD /* ButtonDS.swift in Sources */,
+				AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */,
+				AAE0E71C2B3F4D9200EBF2FD /* LoginViewModel.swift in Sources */,
+				AAE0E7242B3F510500EBF2FD /* Radius.swift in Sources */,
+				AAE0E7262B3F54EA00EBF2FD /* TextFieldDS.swift in Sources */,
+				AAE0E72B2B3F5F4F00EBF2FD /* SignUpView.swift in Sources */,
+				AAE0E7282B3F5E9800EBF2FD /* InputText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AAE0E7102B3F4B3300EBF2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAE0E7112B3F4B3300EBF2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AAE0E7132B3F4B3300EBF2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Eftelya/Eftelya.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Eftelya/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dogademirturk.Eftelya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAE0E7142B3F4B3300EBF2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Eftelya/Eftelya.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Eftelya/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dogademirturk.Eftelya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAE0E6FE2B3F4B3200EBF2FD /* Build configuration list for PBXProject "Eftelya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE0E7102B3F4B3300EBF2FD /* Debug */,
+				AAE0E7112B3F4B3300EBF2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAE0E7122B3F4B3300EBF2FD /* Build configuration list for PBXNativeTarget "Eftelya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE0E7132B3F4B3300EBF2FD /* Debug */,
+				AAE0E7142B3F4B3300EBF2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAE0E6FB2B3F4B3200EBF2FD /* Project object */;
+}
