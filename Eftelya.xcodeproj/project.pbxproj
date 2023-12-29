@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AA07D3242B3F62C000081C25 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07D3232B3F62C000081C25 /* SignUpViewModel.swift */; };
+		AA4BC6A52B3F6E8E0000B78A /* ProductDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6A42B3F6E8E0000B78A /* ProductDataSource.swift */; };
+		AA4BC6A72B3F6F860000B78A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6A62B3F6F860000B78A /* Product.swift */; };
+		AA4BC6A92B3F704D0000B78A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6A82B3F704D0000B78A /* HomeView.swift */; };
+		AA4BC6AB2B3F70E60000B78A /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AA2B3F70E60000B78A /* Loading.swift */; };
+		AA4BC6AD2B3F70FF0000B78A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AC2B3F70FF0000B78A /* HomeViewModel.swift */; };
+		AA4BC6AF2B3F72DA0000B78A /* ProductDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */; };
+		AA4BC6B22B3F77ED0000B78A /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */; };
+		AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B52B3F79C00000B78A /* ProductRow.swift */; };
 		AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */; };
 		AAE0E7092B3F4B3200EBF2FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */; };
 		AAE0E70B2B3F4B3300EBF2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0E70A2B3F4B3300EBF2FD /* Assets.xcassets */; };
@@ -23,6 +31,14 @@
 
 /* Begin PBXFileReference section */
 		AA07D3232B3F62C000081C25 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AA4BC6A42B3F6E8E0000B78A /* ProductDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSource.swift; sourceTree = "<group>"; };
+		AA4BC6A62B3F6F860000B78A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AA4BC6A82B3F704D0000B78A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA4BC6AA2B3F70E60000B78A /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		AA4BC6AC2B3F70FF0000B78A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSourceDelegate.swift; sourceTree = "<group>"; };
+		AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		AA4BC6B52B3F79C00000B78A /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eftelya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EftelyaApp.swift; sourceTree = "<group>"; };
 		AAE0E7082B3F4B3200EBF2FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -52,6 +68,9 @@
 		AA07D3252B3F663800081C25 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AA4BC6A82B3F704D0000B78A /* HomeView.swift */,
+				AA4BC6AC2B3F70FF0000B78A /* HomeViewModel.swift */,
+				AA4BC6B52B3F79C00000B78A /* ProductRow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -75,6 +94,14 @@
 			children = (
 			);
 			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		AA4BC6B02B3F77D80000B78A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		AAE0E6FA2B3F4B3200EBF2FD = {
@@ -119,6 +146,7 @@
 		AAE0E7152B3F4D1600EBF2FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA4BC6B02B3F77D80000B78A /* Common */,
 				AA07D3282B3F666D00081C25 /* UserInformation */,
 				AA07D3272B3F665E00081C25 /* ProductDetail */,
 				AA07D3262B3F665800081C25 /* About */,
@@ -137,6 +165,7 @@
 				AAE0E7232B3F510500EBF2FD /* Radius.swift */,
 				AAE0E7252B3F54EA00EBF2FD /* TextFieldDS.swift */,
 				AAE0E7272B3F5E9800EBF2FD /* InputText.swift */,
+				AA4BC6AA2B3F70E60000B78A /* Loading.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -153,6 +182,7 @@
 		AAE0E7182B3F4D5000EBF2FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AA4BC6A62B3F6F860000B78A /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +190,8 @@
 		AAE0E7192B3F4D5800EBF2FD /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				AA4BC6A42B3F6E8E0000B78A /* ProductDataSource.swift */,
+				AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -243,15 +275,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4BC6B22B3F77ED0000B78A /* NavigationBar.swift in Sources */,
 				AAE0E7092B3F4B3200EBF2FD /* LoginView.swift in Sources */,
+				AA4BC6AF2B3F72DA0000B78A /* ProductDataSourceDelegate.swift in Sources */,
 				AAE0E7202B3F4FB600EBF2FD /* Spacing.swift in Sources */,
+				AA4BC6A92B3F704D0000B78A /* HomeView.swift in Sources */,
 				AA07D3242B3F62C000081C25 /* SignUpViewModel.swift in Sources */,
+				AA4BC6AB2B3F70E60000B78A /* Loading.swift in Sources */,
 				AAE0E7222B3F50E700EBF2FD /* ButtonDS.swift in Sources */,
+				AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */,
 				AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */,
+				AA4BC6A72B3F6F860000B78A /* Product.swift in Sources */,
 				AAE0E71C2B3F4D9200EBF2FD /* LoginViewModel.swift in Sources */,
 				AAE0E7242B3F510500EBF2FD /* Radius.swift in Sources */,
 				AAE0E7262B3F54EA00EBF2FD /* TextFieldDS.swift in Sources */,
+				AA4BC6A52B3F6E8E0000B78A /* ProductDataSource.swift in Sources */,
 				AAE0E72B2B3F5F4F00EBF2FD /* SignUpView.swift in Sources */,
+				AA4BC6AD2B3F70FF0000B78A /* HomeViewModel.swift in Sources */,
 				AAE0E7282B3F5E9800EBF2FD /* InputText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

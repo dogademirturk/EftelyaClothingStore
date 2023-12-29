@@ -8,6 +8,7 @@
 import Foundation
 
 class SignUpViewModel: ObservableObject {
+    
     @Published var firstName: String = ""
     @Published var lastName: String = ""
     @Published var email: String = ""

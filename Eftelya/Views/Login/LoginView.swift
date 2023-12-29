@@ -45,6 +45,9 @@ struct LoginView: View {
                     ) {
                         EmptyView()
                     }
+
+                    //TODO: delete
+                    NavigationLink("Home", destination: HomeView())
                 }
                 .padding(Spacing.spacing_4)
             }
