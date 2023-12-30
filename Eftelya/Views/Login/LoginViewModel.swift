@@ -11,6 +11,7 @@ class LoginViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var password: String = ""
     @Published var isSignUpActive = false
+    @Published var isLogInActive = false
 
     func logInTapped() {
         print(username)

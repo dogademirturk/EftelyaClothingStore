@@ -19,7 +19,7 @@ struct NavigationBar: View {
                         NavigationLink("Home", destination: HomeView())
                             .foregroundColor(.black)
                             .padding(.horizontal, Spacing.spacing_5)
-                        NavigationLink("My Account", destination: EmptyView())
+                        NavigationLink("My Account", destination: UserInformationView())
                             .foregroundColor(.black)
                             .padding(.horizontal, Spacing.spacing_5)
                         Spacer()

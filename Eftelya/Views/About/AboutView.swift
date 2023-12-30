@@ -23,6 +23,7 @@ struct AboutView: View {
             }
         }
         .navigationTitle("About Eftelya")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
     }
 }

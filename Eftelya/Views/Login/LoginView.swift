@@ -34,6 +34,13 @@ struct LoginView: View {
                 VStack(spacing: .zero) {
                     ButtonDS(title: "Log In") {
                         viewModel.logInTapped()
+                        viewModel.isLogInActive = true
+                    }
+                    NavigationLink(
+                        destination: HomeView(),
+                        isActive: $viewModel.isLogInActive
+                    ) {
+                        EmptyView()
                     }
 
                     ButtonDS(title: "Sign Up") {
@@ -45,9 +52,6 @@ struct LoginView: View {
                     ) {
                         EmptyView()
                     }
-
-                    //TODO: delete
-                    NavigationLink("Home", destination: HomeView())
                 }
                 .padding(Spacing.spacing_4)
             }

@@ -28,6 +28,8 @@
 		AAE0E7262B3F54EA00EBF2FD /* TextFieldDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7252B3F54EA00EBF2FD /* TextFieldDS.swift */; };
 		AAE0E7282B3F5E9800EBF2FD /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7272B3F5E9800EBF2FD /* InputText.swift */; };
 		AAE0E72B2B3F5F4F00EBF2FD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E72A2B3F5F4F00EBF2FD /* SignUpView.swift */; };
+		AAF8A1152B4003C5002E73C1 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */; };
+		AAF8A1172B400469002E73C1 /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		AAE0E7252B3F54EA00EBF2FD /* TextFieldDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDS.swift; sourceTree = "<group>"; };
 		AAE0E7272B3F5E9800EBF2FD /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
 		AAE0E72A2B3F5F4F00EBF2FD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
+		AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		AA07D3282B3F666D00081C25 /* UserInformation */ = {
 			isa = PBXGroup;
 			children = (
+				AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */,
+				AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */,
 			);
 			path = UserInformation;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 				AA07D3242B3F62C000081C25 /* SignUpViewModel.swift in Sources */,
 				AA4BC6AB2B3F70E60000B78A /* Loading.swift in Sources */,
 				AAE0E7222B3F50E700EBF2FD /* ButtonDS.swift in Sources */,
+				AAF8A1152B4003C5002E73C1 /* UserInformationView.swift in Sources */,
+				AAF8A1172B400469002E73C1 /* UserInformationViewModel.swift in Sources */,
 				AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */,
 				AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */,
 				AA4BC6A72B3F6F860000B78A /* Product.swift in Sources */,
