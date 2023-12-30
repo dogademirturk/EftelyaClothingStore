@@ -31,6 +31,7 @@
 		AAF8A1152B4003C5002E73C1 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */; };
 		AAF8A1172B400469002E73C1 /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */; };
 		AAF8A11B2B400AA9002E73C1 /* ParagraphText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A11A2B400AA9002E73C1 /* ParagraphText.swift */; };
+		AAF8A1212B402162002E73C1 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1202B402162002E73C1 /* Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 		AAF8A11A2B400AA9002E73C1 /* ParagraphText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphText.swift; sourceTree = "<group>"; };
+		AAF8A1202B402162002E73C1 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */,
+				AAF8A1202B402162002E73C1 /* Layout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				AAE0E7222B3F50E700EBF2FD /* ButtonDS.swift in Sources */,
 				AAF8A1152B4003C5002E73C1 /* UserInformationView.swift in Sources */,
 				AAF8A11B2B400AA9002E73C1 /* ParagraphText.swift in Sources */,
+				AAF8A1212B402162002E73C1 /* Layout.swift in Sources */,
 				AAF8A1172B400469002E73C1 /* UserInformationViewModel.swift in Sources */,
 				AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */,
 				AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */,

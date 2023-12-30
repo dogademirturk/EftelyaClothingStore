@@ -12,58 +12,44 @@ struct UserInformationView: View {
     @StateObject private var viewModel = UserInformationViewModel()
 
     var body: some View {
-        ZStack {
-            Color.main
-                .ignoresSafeArea()
-            
-            VStack(spacing: .zero) {
-                
-                ScrollView {
-                    VStack(spacing: .zero) {
+        Layout(content: mainContent as! AnyView, title: "My Account")
+    }
 
-                        Spacer()
-                        
-                        HStack(spacing: .zero) {
+    private var mainContent: some View {
+        VStack(spacing: .zero) {
 
-                            VStack(spacing: .zero) {
-                                InputText(text: "First Name")
-                                InputText(text: "Last Name")
-                                InputText(text: "Email")
-                                InputText(text: "Username")
-                            }
-                            .padding(.horizontal, Spacing.spacing_3)
+            Spacer()
 
-                            VStack(spacing: .zero) {
-                                InputText(text: "<First Name>")
-                                InputText(text: "<Last Name>")
-                                InputText(text: "<Email>")
-                                InputText(text: "<Username>")
-                            }
-                            .padding(.horizontal, Spacing.spacing_3)
-                        }
+            HStack(spacing: .zero) {
 
-                        Spacer()
-
-                        ButtonDS(title: "Log Out") {
-                            viewModel.isLogOutActive = true
-                        }
-                        NavigationLink(
-                            destination: LoginView(),
-                            isActive: $viewModel.isLogOutActive
-                        ) {
-                            EmptyView()
-                        }
-                    }
+                VStack(spacing: .zero) {
+                    InputText(text: "First Name")
+                    InputText(text: "Last Name")
+                    InputText(text: "Email")
+                    InputText(text: "Username")
                 }
+                .padding(.horizontal, Spacing.spacing_3)
 
-                Spacer()
-
-                NavigationBar()
+                VStack(spacing: .zero) {
+                    InputText(text: "<First Name>")
+                    InputText(text: "<Last Name>")
+                    InputText(text: "<Email>")
+                    InputText(text: "<Username>")
+                }
+                .padding(.horizontal, Spacing.spacing_3)
             }
-            .navigationTitle("My Account")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden()
-            .ignoresSafeArea(edges: .bottom)
+
+            Spacer()
+
+            ButtonDS(title: "Log Out") {
+                viewModel.isLogOutActive = true
+            }
+            NavigationLink(
+                destination: LoginView(),
+                isActive: $viewModel.isLogOutActive
+            ) {
+                EmptyView()
+            }
         }
     }
 }
