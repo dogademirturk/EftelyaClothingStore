@@ -12,43 +12,41 @@ struct UserInformationView: View {
     @StateObject private var viewModel = UserInformationViewModel()
 
     var body: some View {
-        Layout(content: mainContent as! AnyView, title: "My Account")
-    }
+        LayoutView(title: "My Account") {
+            VStack(spacing: .zero) {
 
-    private var mainContent: some View {
-        VStack(spacing: .zero) {
+                Spacer()
 
-            Spacer()
+                HStack(spacing: .zero) {
 
-            HStack(spacing: .zero) {
+                    VStack(spacing: .zero) {
+                        InputText(text: "First Name")
+                        InputText(text: "Last Name")
+                        InputText(text: "Email")
+                        InputText(text: "Username")
+                    }
+                    .padding(.horizontal, Spacing.spacing_3)
 
-                VStack(spacing: .zero) {
-                    InputText(text: "First Name")
-                    InputText(text: "Last Name")
-                    InputText(text: "Email")
-                    InputText(text: "Username")
+                    VStack(spacing: .zero) {
+                        InputText(text: "<First Name>")
+                        InputText(text: "<Last Name>")
+                        InputText(text: "<Email>")
+                        InputText(text: "<Username>")
+                    }
+                    .padding(.horizontal, Spacing.spacing_3)
                 }
-                .padding(.horizontal, Spacing.spacing_3)
 
-                VStack(spacing: .zero) {
-                    InputText(text: "<First Name>")
-                    InputText(text: "<Last Name>")
-                    InputText(text: "<Email>")
-                    InputText(text: "<Username>")
+                Spacer()
+
+                ButtonDS(title: "Log Out") {
+                    viewModel.isLogOutActive = true
                 }
-                .padding(.horizontal, Spacing.spacing_3)
-            }
-
-            Spacer()
-
-            ButtonDS(title: "Log Out") {
-                viewModel.isLogOutActive = true
-            }
-            NavigationLink(
-                destination: LoginView(),
-                isActive: $viewModel.isLogOutActive
-            ) {
-                EmptyView()
+                NavigationLink(
+                    destination: LoginView(),
+                    isActive: $viewModel.isLogOutActive
+                ) {
+                    EmptyView()
+                }
             }
         }
     }

@@ -12,21 +12,21 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
 
     var body: some View {
-        Layout(content: mainContent as! AnyView, title: "Home")
-    }
+        
+        LayoutView(title: "Home") {
+            VStack(spacing: .zero) {
+                
+                if viewModel.isLoading {
+                    Loading()
+                        .onAppear {
+                            viewModel.loadPlayerList()
+                        }
 
-    private var mainContent: some View {
-        VStack(spacing: .zero) {
-            if viewModel.isLoading {
-                Loading()
-                    .onAppear {
-                        viewModel.loadPlayerList()
+                } else {
+
+                    ForEach(viewModel.productList, id: \.self) { product in
+                        ProductRow(product: product)
                     }
-                
-            } else {
-                
-                ForEach(viewModel.productList, id: \.self) { product in
-                    ProductRow(product: product)
                 }
             }
         }

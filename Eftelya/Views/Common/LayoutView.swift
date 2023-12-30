@@ -7,29 +7,26 @@
 
 import SwiftUI
 
-struct Layout: View {
+struct LayoutView<Content: View>: View {
 
-    private var content: AnyView
     private var title: String
+    private let content: () -> Content
 
-    init(content: AnyView, title: String) {
-        self.content = content
+    init(title: String, content: @escaping () -> Content) {
         self.title = title
+        self.content = content
     }
 
     var body: some View {
-        ZStack {
-            Color.main
-                .ignoresSafeArea()
-            
+        BackgroundView {
             VStack(spacing: .zero) {
                 ScrollView {
-                    content
+                    content()
                 }
 
                 Spacer()
 
-                NavigationBar()
+                NavigationBarView()
             }
             .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
@@ -40,5 +37,7 @@ struct Layout: View {
 }
 
 #Preview {
-    Layout(content: AnyView(EmptyView()), title: "Test")
+    LayoutView(title: "Test") {
+        EmptyView()
+    }
 }

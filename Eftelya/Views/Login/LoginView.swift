@@ -13,10 +13,8 @@ struct LoginView: View {
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.main
-                    .ignoresSafeArea()
-                
+            BackgroundView {
+
                 VStack(spacing: .zero) {
 
                     HStack(spacing: .zero) {

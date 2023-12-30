@@ -12,9 +12,7 @@ struct SignUpView: View {
     @StateObject private var viewModel = SignUpViewModel()
 
     var body: some View {
-        ZStack {
-            Color.main
-                .ignoresSafeArea()
+        BackgroundView {
             
             VStack(spacing: .zero) {
 
@@ -44,7 +42,13 @@ struct SignUpView: View {
                 Spacer()
 
                 ButtonDS(title: "Register") {
-
+                    viewModel.isRegisterActive = true
+                }
+                NavigationLink(
+                    destination: LoginView(),
+                    isActive: $viewModel.isRegisterActive
+                ) {
+                    EmptyView()
                 }
             }
             .navigationTitle("Sign Up")

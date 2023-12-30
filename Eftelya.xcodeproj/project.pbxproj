@@ -14,7 +14,7 @@
 		AA4BC6AB2B3F70E60000B78A /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AA2B3F70E60000B78A /* Loading.swift */; };
 		AA4BC6AD2B3F70FF0000B78A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AC2B3F70FF0000B78A /* HomeViewModel.swift */; };
 		AA4BC6AF2B3F72DA0000B78A /* ProductDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */; };
-		AA4BC6B22B3F77ED0000B78A /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */; };
+		AA4BC6B22B3F77ED0000B78A /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B12B3F77ED0000B78A /* NavigationBarView.swift */; };
 		AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B52B3F79C00000B78A /* ProductRow.swift */; };
 		AA4BC6B82B3F83B30000B78A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BC6B72B3F83B30000B78A /* AboutView.swift */; };
 		AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0E7062B3F4B3200EBF2FD /* EftelyaApp.swift */; };
@@ -31,7 +31,8 @@
 		AAF8A1152B4003C5002E73C1 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */; };
 		AAF8A1172B400469002E73C1 /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */; };
 		AAF8A11B2B400AA9002E73C1 /* ParagraphText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A11A2B400AA9002E73C1 /* ParagraphText.swift */; };
-		AAF8A1212B402162002E73C1 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1202B402162002E73C1 /* Layout.swift */; };
+		AAF8A1212B402162002E73C1 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1202B402162002E73C1 /* LayoutView.swift */; };
+		AAF8A1232B4028D3002E73C1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8A1222B4028D3002E73C1 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,7 @@
 		AA4BC6AA2B3F70E60000B78A /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		AA4BC6AC2B3F70FF0000B78A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AA4BC6AE2B3F72DA0000B78A /* ProductDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSourceDelegate.swift; sourceTree = "<group>"; };
-		AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		AA4BC6B12B3F77ED0000B78A /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		AA4BC6B52B3F79C00000B78A /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		AA4BC6B72B3F83B30000B78A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eftelya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +62,8 @@
 		AAF8A1142B4003C5002E73C1 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		AAF8A1162B400469002E73C1 /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 		AAF8A11A2B400AA9002E73C1 /* ParagraphText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphText.swift; sourceTree = "<group>"; };
-		AAF8A1202B402162002E73C1 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		AAF8A1202B402162002E73C1 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		AAF8A1222B4028D3002E73C1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,9 @@
 		AA4BC6B02B3F77D80000B78A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AA4BC6B12B3F77ED0000B78A /* NavigationBar.swift */,
-				AAF8A1202B402162002E73C1 /* Layout.swift */,
+				AA4BC6B12B3F77ED0000B78A /* NavigationBarView.swift */,
+				AAF8A1202B402162002E73C1 /* LayoutView.swift */,
+				AAF8A1222B4028D3002E73C1 /* BackgroundView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -290,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4BC6B22B3F77ED0000B78A /* NavigationBar.swift in Sources */,
+				AA4BC6B22B3F77ED0000B78A /* NavigationBarView.swift in Sources */,
 				AAE0E7092B3F4B3200EBF2FD /* LoginView.swift in Sources */,
 				AA4BC6AF2B3F72DA0000B78A /* ProductDataSourceDelegate.swift in Sources */,
 				AAE0E7202B3F4FB600EBF2FD /* Spacing.swift in Sources */,
@@ -300,7 +303,7 @@
 				AAE0E7222B3F50E700EBF2FD /* ButtonDS.swift in Sources */,
 				AAF8A1152B4003C5002E73C1 /* UserInformationView.swift in Sources */,
 				AAF8A11B2B400AA9002E73C1 /* ParagraphText.swift in Sources */,
-				AAF8A1212B402162002E73C1 /* Layout.swift in Sources */,
+				AAF8A1212B402162002E73C1 /* LayoutView.swift in Sources */,
 				AAF8A1172B400469002E73C1 /* UserInformationViewModel.swift in Sources */,
 				AA4BC6B62B3F79C00000B78A /* ProductRow.swift in Sources */,
 				AAE0E7072B3F4B3200EBF2FD /* EftelyaApp.swift in Sources */,
@@ -308,6 +311,7 @@
 				AAE0E71C2B3F4D9200EBF2FD /* LoginViewModel.swift in Sources */,
 				AAE0E7242B3F510500EBF2FD /* Radius.swift in Sources */,
 				AAE0E7262B3F54EA00EBF2FD /* TextFieldDS.swift in Sources */,
+				AAF8A1232B4028D3002E73C1 /* BackgroundView.swift in Sources */,
 				AA4BC6A52B3F6E8E0000B78A /* ProductDataSource.swift in Sources */,
 				AAE0E72B2B3F5F4F00EBF2FD /* SignUpView.swift in Sources */,
 				AA4BC6B82B3F83B30000B78A /* AboutView.swift in Sources */,
