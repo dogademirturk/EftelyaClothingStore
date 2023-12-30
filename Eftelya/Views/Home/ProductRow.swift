@@ -40,9 +40,10 @@ struct ProductRow: View {
             .padding(Spacing.spacing_6)
             .background(
                 RoundedRectangle(cornerRadius: Radius.radius_4)
-                    .foregroundColor(.brown)
+                    .foregroundColor(.white)
             )
         }
+        .padding(Spacing.spacing_3)
     }
 }
 

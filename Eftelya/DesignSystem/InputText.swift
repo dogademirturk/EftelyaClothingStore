@@ -18,6 +18,7 @@ struct InputText: View {
     var body: some View {
         Text(text)
             .padding(.vertical, Spacing.spacing_2)
+            .foregroundColor(.black)
     }
 }
 

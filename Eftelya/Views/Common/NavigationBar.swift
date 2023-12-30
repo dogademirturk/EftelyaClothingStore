@@ -13,16 +13,21 @@ struct NavigationBar: View {
         HStack(spacing: .zero) {
             Rectangle()
                 .foregroundColor(.brown)
-                .frame(height: 75)
+                .frame(height: 110)
                 .overlay {
                     HStack {
                         NavigationLink("Home", destination: HomeView())
                             .foregroundColor(.black)
                             .padding(.horizontal, Spacing.spacing_5)
+
+                        Spacer()
+
                         NavigationLink("My Account", destination: UserInformationView())
                             .foregroundColor(.black)
                             .padding(.horizontal, Spacing.spacing_5)
+
                         Spacer()
+
                         NavigationLink("About Eftelya", destination: AboutView())
                             .foregroundColor(.black)
                             .padding(.horizontal, Spacing.spacing_5)

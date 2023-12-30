@@ -12,26 +12,40 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
 
     var body: some View {
-        VStack(spacing: .zero) {
-            
-            if viewModel.isLoading {
-                Loading()
-                    .onAppear {
-                        viewModel.loadPlayerList()
+        ZStack {
+            Color.main
+                .ignoresSafeArea()
+
+            VStack(spacing: .zero) {
+
+                if viewModel.isLoading {
+                    Spacer()
+
+                    Loading()
+                        .onAppear {
+                            viewModel.loadPlayerList()
+                        }
+
+                } else {
+
+                    ScrollView {
+                        VStack(spacing: .zero) {
+                            ForEach(viewModel.productList, id: \.self) { product in
+                                ProductRow(product: product)
+                            }
+                        }
                     }
-            } else {
-                List(viewModel.productList, id:\.self) { product in
-                    ProductRow(product: product)
                 }
+
+                Spacer()
+
+                NavigationBar()
             }
-
-            Spacer()
-
-            NavigationBar()
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
+            .ignoresSafeArea(edges: .bottom)
         }
-        .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden()
     }
 }
 

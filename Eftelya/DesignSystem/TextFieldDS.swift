@@ -21,8 +21,6 @@ struct TextFieldDS: View {
         TextField(placeholder, text: binding)
             .padding(.vertical, Spacing.spacing_2)
             .padding(.horizontal, Spacing.spacing_3)
-            //.background(.gray)
-            //.cornerRadius(Radius.radius_2)
     }
 }
 

@@ -12,39 +12,44 @@ struct SignUpView: View {
     @StateObject private var viewModel = SignUpViewModel()
 
     var body: some View {
-        VStack(spacing: .zero) {
+        ZStack {
+            Color.main
+                .ignoresSafeArea()
+            
+            VStack(spacing: .zero) {
 
-            Spacer()
+                Spacer()
 
-            HStack(spacing: .zero) {
-                
-                VStack(spacing: .zero) {
-                    InputText(text: "First Name")
-                    InputText(text: "Last Name")
-                    InputText(text: "Email")
-                    InputText(text: "Username")
-                    InputText(text: "Password")
+                HStack(spacing: .zero) {
+                    
+                    VStack(spacing: .zero) {
+                        InputText(text: "First Name")
+                        InputText(text: "Last Name")
+                        InputText(text: "Email")
+                        InputText(text: "Username")
+                        InputText(text: "Password")
+                    }
+                    .padding(.horizontal, Spacing.spacing_3)
+
+                    VStack(spacing: .zero) {
+                        TextFieldDS(placeholder: "First Name", binding: $viewModel.firstName)
+                        TextFieldDS(placeholder: "Last Name", binding: $viewModel.lastName)
+                        TextFieldDS(placeholder: "Email", binding: $viewModel.email)
+                        TextFieldDS(placeholder: "Username", binding: $viewModel.username)
+                        TextFieldDS(placeholder: "Password", binding: $viewModel.password)
+                    }
+                    .padding(.horizontal, Spacing.spacing_3)
                 }
-                .padding(.horizontal, Spacing.spacing_3)
 
-                VStack(spacing: .zero) {
-                    TextFieldDS(placeholder: "First Name", binding: $viewModel.firstName)
-                    TextFieldDS(placeholder: "Last Name", binding: $viewModel.lastName)
-                    TextFieldDS(placeholder: "Email", binding: $viewModel.email)
-                    TextFieldDS(placeholder: "Username", binding: $viewModel.username)
-                    TextFieldDS(placeholder: "Password", binding: $viewModel.password)
+                Spacer()
+
+                ButtonDS(title: "Register") {
+
                 }
-                .padding(.horizontal, Spacing.spacing_3)
             }
-
-            Spacer()
-
-            ButtonDS(title: "Register") {
-
-            }
-        }
-        .navigationTitle("Sign Up")
+            .navigationTitle("Sign Up")
         .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
