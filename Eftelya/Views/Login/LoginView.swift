@@ -17,6 +17,10 @@ struct LoginView: View {
 
                 VStack(spacing: .zero) {
 
+                    Image(.logo)
+                        .resizable()
+                        .frame(width: 300, height: 300)
+
                     HStack(spacing: .zero) {
 
                         VStack(spacing: .zero) {
@@ -58,7 +62,7 @@ struct LoginView: View {
                 }
                 .padding(Spacing.spacing_4)
                 .navigationTitle("Login")
-            .navigationBarHidden(true)
+                .navigationBarHidden(true)
             }
         }
     }

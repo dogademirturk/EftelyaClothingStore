@@ -29,6 +29,8 @@ struct LayoutView<Content: View>: View {
                 NavigationBarView()
             }
             .navigationTitle(title)
+            .toolbarBackground(Color.brown, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden()
             .ignoresSafeArea(edges: .bottom)
