@@ -21,7 +21,7 @@
 		AA4CA9E52B472EDD0007C61B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CA9E42B472EDD0007C61B /* AuthViewModel.swift */; };
 		AA4CA9E72B472FD50007C61B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CA9E62B472FD50007C61B /* User.swift */; };
 		AA4CA9E92B47305A0007C61B /* UserInformationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CA9E82B47305A0007C61B /* UserInformationRow.swift */; };
-		AA4CA9EC2B4730AA0007C61B /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CA9EB2B4730AA0007C61B /* InputView.swift */; };
+		AA4CA9EC2B4730AA0007C61B /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CA9EB2B4730AA0007C61B /* InputField.swift */; };
 		AA4CA9EE2B4731180007C61B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CA9ED2B4731180007C61B /* ContentView.swift */; };
 		AA899FA22B473395002E0864 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AA899FA12B473395002E0864 /* FirebaseAnalytics */; };
 		AA899FA42B473395002E0864 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = AA899FA32B473395002E0864 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -84,7 +84,7 @@
 		AA4CA9E42B472EDD0007C61B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		AA4CA9E62B472FD50007C61B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AA4CA9E82B47305A0007C61B /* UserInformationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationRow.swift; sourceTree = "<group>"; };
-		AA4CA9EB2B4730AA0007C61B /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		AA4CA9EB2B4730AA0007C61B /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		AA4CA9ED2B4731180007C61B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA899FD72B4736B1002E0864 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE0E7032B3F4B3200EBF2FD /* Eftelya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eftelya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,7 +265,7 @@
 				AAE0E7272B3F5E9800EBF2FD /* InputText.swift */,
 				AA4BC6AA2B3F70E60000B78A /* Loading.swift */,
 				AAF8A11A2B400AA9002E73C1 /* ParagraphText.swift */,
-				AA4CA9EB2B4730AA0007C61B /* InputView.swift */,
+				AA4CA9EB2B4730AA0007C61B /* InputField.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 				AA4BC6AD2B3F70FF0000B78A /* HomeViewModel.swift in Sources */,
 				AA4CA9EE2B4731180007C61B /* ContentView.swift in Sources */,
 				AA4CA9E52B472EDD0007C61B /* AuthViewModel.swift in Sources */,
-				AA4CA9EC2B4730AA0007C61B /* InputView.swift in Sources */,
+				AA4CA9EC2B4730AA0007C61B /* InputField.swift in Sources */,
 				AAE0E7282B3F5E9800EBF2FD /* InputText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

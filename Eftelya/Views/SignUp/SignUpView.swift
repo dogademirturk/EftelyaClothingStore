@@ -9,140 +9,82 @@ import SwiftUI
 
 struct SignUpView: View {
 
-    //@StateObject private var viewModel = SignUpViewModel()
-    @State private var email = ""
-    @State private var password = ""
-    @State private var fullName = ""
-    @State private var confirmPassword = ""
+    @StateObject private var viewModel = SignUpViewModel()
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel: AuthViewModel
-    @State private var showErrorAlert = false // State to control the error alert
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
-        /*BackgroundView {
+        BackgroundView {
 
             VStack(spacing: .zero) {
+                
+                Image(.logo)
+                    .resizable()
+                    .frame(width: 200, height: 200)
 
-                Spacer()
+                VStack(spacing: Spacing.spacing_4) {
+                    InputField(text: $viewModel.email, title:"Email Addres", placeHolder:"name@example.com")
+                        .autocapitalization(.none)
 
-                HStack(spacing: .zero) {
-                    
-                    VStack(spacing: .zero) {
-                        InputText(text: "First Name")
-                        InputText(text: "Last Name")
-                        InputText(text: "Email")
-                        InputText(text: "Username")
-                        InputText(text: "Password")
-                    }
-                    .padding(.horizontal, Spacing.spacing_3)
+                    InputField(text: $viewModel.fullName, title:"Full Name", placeHolder:"Enter your name")
 
-                    VStack(spacing: .zero) {
-                        TextFieldDS(placeholder: "First Name", binding: $viewModel.firstName)
-                        TextFieldDS(placeholder: "Last Name", binding: $viewModel.lastName)
-                        TextFieldDS(placeholder: "Email", binding: $viewModel.email)
-                        TextFieldDS(placeholder: "Username", binding: $viewModel.username)
-                        TextFieldDS(placeholder: "Password", binding: $viewModel.password)
-                    }
-                    .padding(.horizontal, Spacing.spacing_3)
-                }
+                    InputField(text: $viewModel.password, title:"Password", placeHolder:"Enter your password", isSecureField: true)
 
-                Spacer()
-
-                ButtonDS(title: "Register") {
-                    viewModel.isRegisterActive = true
-                }
-                NavigationLink(
-                    destination: LoginView(),
-                    isActive: $viewModel.isRegisterActive
-                ) {
-                    EmptyView()
-                }
-            }
-            .navigationTitle("Sign Up")
-        .navigationBarTitleDisplayMode(.inline)
-        }*/
-
-        VStack {
-            Image(.logo)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 100, height: 120)
-                .padding(.vertical,32)
-
-            //form fields
-            VStack(spacing: 24) {
-                InputView(text: $email, title:"Email Addres", placeHolder:"name@example.com")
-                    .autocapitalization(.none)
-
-                InputView(text: $fullName, title:"Full Name", placeHolder:"Enter your name")
-
-                InputView(text: $password, title:"Password", placeHolder:"Enter your password", isSecureField: true)
-
-                ZStack(alignment: .trailing) {
-                    InputView(text: $confirmPassword, title:"Confirm Password", placeHolder:"Confirm your password", isSecureField: true)
-                    if !password.isEmpty && !confirmPassword.isEmpty {
-                        if password == confirmPassword {
-                            Image(systemName: "checkmark.circle.fill")
-                                .imageScale(.large)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color(.systemGreen))
-                        } else {
-                            Image(systemName: "xmark.circle.fill")
-                                .imageScale(.large)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color(.systemRed))
+                    ZStack(alignment: .trailing) {
+                        InputField(text: $viewModel.confirmPassword, title:"Confirm Password", placeHolder:"Confirm your password", isSecureField: true)
+                        if !viewModel.password.isEmpty && !viewModel.confirmPassword.isEmpty {
+                            if viewModel.password == viewModel.confirmPassword {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemGreen))
+                            } else {
+                                Image(systemName: "xmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemRed))
+                            }
                         }
                     }
                 }
-            }
-            .padding(.horizontal)
-            .padding(.top, 12)
+                .padding(.vertical, Spacing.spacing_2)
 
-            //sign in button Aynısı DS yap--------------------------------------------------
-            Button {
-                Task {
-                    do {
-                        try await viewModel.signUp(withEmail: email, password: password, fullName: fullName)
-                    } catch {
-                        showErrorAlert = true // Show the error alert when an error occurs during sign-up
+                ButtonDS(title: "Register") {
+                    Task {
+                        do {
+                            try await authViewModel.signUp(withEmail: viewModel.email, password: viewModel.password, fullName: viewModel.fullName)
+                        } catch {
+                            viewModel.showErrorAlert = true // Show the error alert when an error occurs during sign-up
+                        }
                     }
                 }
-            } label: {
-                HStack {
-                    Text("SIGN UP")
-                        .fontWeight(.semibold)
-                    Image(systemName: "arrow.right")
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
+
+                Spacer()
+
+                Button {
+                    dismiss()
+                } label: {
+                    HStack(spacing: 3) {
+                        Text("Already have an account?")
+                        Text("Sign in")
+                            .fontWeight(.bold)
+                    }
+                    .font(.system(size: 14))
                 }
-                .foregroundColor(.white)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 48)
             }
-            .background(Color(.systemBlue))
-            .disabled(!formIsValid)
-            .opacity(formIsValid ? 1.0 : 0.5)
-            .cornerRadius(10)
-            .padding(.top, 24)
-
-
-            Spacer()
-
-
-            Button {
-                dismiss()
-            } label: {
-                HStack(spacing: 3) {
-                    Text("Already have an account?")
-                    Text("Sign in")
-                        .fontWeight(.bold)
-                }
-                .font(.system(size: 14))
-            }
+            .padding(Spacing.spacing_4)
+            .navigationTitle("Sign Up")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
-        .alert(item: $viewModel.error) { error in
+        .alert(item: $authViewModel.error) { error in
                     Alert(
                         title: Text("Error"),
-                        message: Text(viewModel.error?.message ?? ""),
+                        message: Text(authViewModel.error?.message ?? ""),
                         dismissButton: .default(Text("OK")) {
-                            viewModel.error = nil // Reset the error
+                            authViewModel.error = nil // Reset the error
                         }
                     )
         }
@@ -152,7 +94,7 @@ struct SignUpView: View {
 // MARK: - AuthenticationFormProtocol
 extension SignUpView: AuthenticationFormProtocol {
     var formIsValid: Bool {
-        return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5 && !fullName.isEmpty && confirmPassword == password
+        return !viewModel.email.isEmpty && viewModel.email.contains("@") && !viewModel.password.isEmpty && viewModel.password.count > 5 && !viewModel.fullName.isEmpty && viewModel.confirmPassword == viewModel.password
     }
 }
 

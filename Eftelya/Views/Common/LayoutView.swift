@@ -21,7 +21,9 @@ struct LayoutView<Content: View>: View {
         BackgroundView {
             VStack(spacing: .zero) {
                 ScrollView {
-                    content()
+                    VStack(spacing: .zero) {
+                        content()
+                    }
                 }
 
                 Spacer()
@@ -29,7 +31,7 @@ struct LayoutView<Content: View>: View {
                 NavigationBarView()
             }
             .navigationTitle(title)
-            .toolbarBackground(Color.brown, for: .navigationBar)
+            .toolbarBackground(Color.appBrown, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden()

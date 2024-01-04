@@ -20,7 +20,7 @@ class HomeViewModel: ObservableObject {
         dataSource.delegate = self
     }
 
-    func loadPlayerList() {
+    func loadProductList() {
         dataSource.loadProductList()
     }
 

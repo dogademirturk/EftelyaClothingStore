@@ -8,12 +8,9 @@
 import Foundation
 
 class SignUpViewModel: ObservableObject {
-    
-    @Published var firstName: String = ""
-    @Published var lastName: String = ""
+    @Published var fullName: String = ""
     @Published var email: String = ""
-    @Published var username: String = ""
     @Published var password: String = ""
-    @Published var isRegisterActive = false
-
+    @Published var confirmPassword: String = ""
+    @Published var showErrorAlert = false // State to control the error alert
 }

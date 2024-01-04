@@ -12,7 +12,7 @@ struct NavigationBarView: View {
     var body: some View {
         HStack(spacing: .zero) {
             Rectangle()
-                .foregroundColor(.brown)
+                .foregroundColor(.appBrown)
                 .frame(height: 110)
                 .overlay {
                     HStack {

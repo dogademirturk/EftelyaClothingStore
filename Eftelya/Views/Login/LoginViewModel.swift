@@ -8,8 +8,7 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    @Published var username: String = ""
+    @Published var email: String = ""
     @Published var password: String = ""
-    @Published var isSignUpActive = false
-    @Published var isLogInActive = false
+    @Published var showErrorAlert = false // State to control the error
 }

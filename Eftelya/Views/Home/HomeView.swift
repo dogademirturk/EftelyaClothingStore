@@ -20,7 +20,7 @@ struct HomeView: View {
                     if viewModel.isLoading {
                         Loading()
                             .onAppear {
-                                viewModel.loadPlayerList()
+                                viewModel.loadProductList()
                             }
                         
                     } else {

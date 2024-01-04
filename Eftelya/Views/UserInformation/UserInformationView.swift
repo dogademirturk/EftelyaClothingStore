@@ -9,14 +9,48 @@ import SwiftUI
 
 struct UserInformationView: View {
 
-    //@StateObject private var viewModel = UserInformationViewModel()
-    @EnvironmentObject var viewModel: AuthViewModel
+    @StateObject private var viewModel = UserInformationViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         /*LayoutView(title: "My Account") {
             VStack(spacing: .zero) {
+                //if let user = authViewModel.currentUser {
+                    /*HStack(spacing: .zero) {
+                        Text(user.initials)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 72, height: 72)
+                            .background(Color(.systemGray3))
+                            .clipShape(Circle())
+                            .padding(.horizontal, Spacing.spacing_3)
 
-                Spacer()
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(user.fullName)
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .padding(.top, 4)
+
+                            Text(user.email)
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                        }
+                    }*/
+
+                    Spacer()
+
+                    ButtonDS(title: "Sign Out") {
+                        authViewModel.signOut()
+                    }
+
+                    ButtonDS(title: "Delete Account") {
+                        Task {
+                            try await authViewModel.deleteAccount()
+                        }
+                    }
+                }
+                /*Spacer()
 
                 HStack(spacing: .zero) {
 
@@ -45,11 +79,11 @@ struct UserInformationView: View {
                     isActive: $viewModel.isLogOutActive
                 ) {
                     EmptyView()
-                }
-            }
+                }*/
+            //}
         }*/
 
-        if let user = viewModel.currentUser {
+        if let user = authViewModel.currentUser {
             List {
                 Section {
                     HStack {
@@ -76,14 +110,14 @@ struct UserInformationView: View {
 
                 Section("ACCOUNT") {
                     Button {
-                        viewModel.signOut()
+                        authViewModel.signOut()
                     } label: {
                         UserInformationRow(imageName: "arrow.left.circle.fill", title: "Sign Out", tintColor: .red)
                     }
 
                     Button {
                         Task {
-                            try await viewModel.deleteAccount()
+                            try await authViewModel.deleteAccount()
                         }
                     } label: {
                         UserInformationRow(imageName: "xmark.circle.fill", title: "Delete Account", tintColor: .red)
