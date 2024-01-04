@@ -30,7 +30,7 @@ struct LoginView: View {
                     }
                     .padding(.vertical, Spacing.spacing_2)
 
-                    ButtonDS(title: "Log In") {
+                    ButtonDS(title: "Sign In") {
                         Task {
                             do {
                                 try await authViewModel.signIn(withEmail: viewModel.email, password: viewModel.password)

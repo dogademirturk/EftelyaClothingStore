@@ -17,35 +17,47 @@ struct ProductDetailView: View {
 
     var body: some View {
         VStack(spacing: .zero) {
-            AsyncImage(url: URL(string: product.image)) { phase in
-                switch phase {
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
-                default:
-                    Loading()
+            List {
+                Section {
+                    AsyncImage(url: URL(string: product.image)) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 300)
+                        default:
+                            Loading()
+                        }
+                    }
+                    .padding(Spacing.spacing_5)
                 }
-            }
-            .padding(Spacing.spacing_5)
+                Section {
+                    HStack(alignment: .top, spacing: Spacing.spacing_3) {
+                        MainText(text: "Title:")
+                        MainText(text: product.title)
+                    }
+                }
 
-            VStack(alignment: .leading, spacing: .zero) {
-                HStack(alignment: .top, spacing: .zero) {
-                    InputText(text: "Title:")
-                    InputText(text: product.title)
+                Section {
+                    HStack(alignment: .top, spacing: Spacing.spacing_3) {
+                        MainText(text: "Price:")
+                        MainText(text: "\(product.price)")
+                    }
                 }
-                HStack(alignment: .top, spacing: .zero) {
-                    InputText(text: "Price:")
-                    InputText(text: "\(product.price)")
+
+                Section {
+                    HStack(alignment: .top, spacing: Spacing.spacing_3) {
+                        MainText(text: "Category:")
+                        MainText(text: product.category)
+                    }
                 }
-                HStack(alignment: .top, spacing: .zero) {
-                    InputText(text: "Category:")
-                    InputText(text: product.category)
-                }
-                HStack(alignment: .top, spacing: .zero) {
-                    InputText(text: "Description:")
-                    InputText(text: product.description)
+
+                Section {
+                    HStack(alignment: .top, spacing: Spacing.spacing_3) {
+                        MainText(text: "Description:")
+                        MainText(text: product.description)
+                    }
                 }
             }
         }

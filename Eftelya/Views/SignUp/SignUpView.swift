@@ -49,7 +49,7 @@ struct SignUpView: View {
                 }
                 .padding(.vertical, Spacing.spacing_2)
 
-                ButtonDS(title: "Register") {
+                ButtonDS(title: "Sign Up") {
                     Task {
                         do {
                             try await authViewModel.signUp(withEmail: viewModel.email, password: viewModel.password, fullName: viewModel.fullName)

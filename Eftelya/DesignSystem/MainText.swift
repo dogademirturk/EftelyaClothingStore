@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InputText: View {
+struct MainText: View {
 
     private var text: String
 
@@ -18,11 +18,10 @@ struct InputText: View {
     var body: some View {
         Text(text)
             .padding(.vertical, Spacing.spacing_2)
-            .padding(.horizontal, Spacing.spacing_3)
             .foregroundColor(.black)
     }
 }
 
 #Preview {
-    InputText(text: "Test")
+    MainText(text: "Test")
 }
