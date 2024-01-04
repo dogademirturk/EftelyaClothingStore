@@ -19,21 +19,19 @@ struct UserInformationView: View {
 
                 HStack(spacing: .zero) {
 
-                    VStack(spacing: .zero) {
+                    VStack(alignment: .leading, spacing: .zero) {
                         InputText(text: "First Name")
                         InputText(text: "Last Name")
                         InputText(text: "Email")
                         InputText(text: "Username")
                     }
-                    .padding(.horizontal, Spacing.spacing_3)
 
-                    VStack(spacing: .zero) {
+                    VStack(alignment: .leading, spacing: .zero) {
                         InputText(text: "<First Name>")
                         InputText(text: "<Last Name>")
                         InputText(text: "<Email>")
                         InputText(text: "<Username>")
                     }
-                    .padding(.horizontal, Spacing.spacing_3)
                 }
 
                 Spacer()

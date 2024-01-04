@@ -48,5 +48,5 @@ struct ProductRow: View {
 }
 
 #Preview {
-    ProductRow(product: Product(id: 1, title: "Test", price: 0.0, category: "Test", description: "Test", image: "Test"))
+    ProductRow(product: Product(id: 0, title: "Test", price: 0.0, category: "Test", description: "Test", image: "Test"))
 }

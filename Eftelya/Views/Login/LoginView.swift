@@ -23,17 +23,15 @@ struct LoginView: View {
 
                     HStack(spacing: .zero) {
 
-                        VStack(spacing: .zero) {
+                        VStack(alignment: .leading, spacing: .zero) {
                             InputText(text: "Username")
                             InputText(text: "Password")
                         }
-                        .padding(.horizontal, Spacing.spacing_3)
 
-                        VStack(spacing: .zero) {
+                        VStack(alignment: .leading, spacing: .zero) {
                             TextFieldDS(placeholder: "Username", binding: $viewModel.username)
                             TextFieldDS(placeholder: "Password", binding: $viewModel.password)
                         }
-                        .padding(.horizontal, Spacing.spacing_3)
                     }
 
                     VStack(spacing: .zero) {

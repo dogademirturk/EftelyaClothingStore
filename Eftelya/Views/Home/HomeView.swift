@@ -26,10 +26,19 @@ struct HomeView: View {
 
                     ForEach(viewModel.productList, id: \.self) { product in
                         ProductRow(product: product)
+                            .onTapGesture {
+                                viewModel.productTapped(product: product)
+                            }
                     }
                 }
             }
         }
+        .sheet(
+            isPresented: $viewModel.isSheetPresented,
+            content: {
+                ProductDetailView(product: viewModel.selectedProduct ?? Product(id: 0, title: "Test", price: 0.0, category: "Test", description: "Test", image: "Test"))
+            }
+        )
     }
 }
 

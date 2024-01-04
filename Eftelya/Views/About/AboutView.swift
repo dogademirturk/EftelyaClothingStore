@@ -21,6 +21,7 @@ struct AboutView: View {
 
                 Spacer()
             }
+            .padding(Spacing.spacing_3)
         }
     }
 }

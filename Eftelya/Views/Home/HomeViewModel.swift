@@ -11,6 +11,8 @@ class HomeViewModel: ObservableObject {
     
     @Published var isLoading = true
     @Published var productList: [Product] = []
+    @Published var isSheetPresented = false
+    @Published var selectedProduct: Product?
 
     private var dataSource = ProductDataSource()
 
@@ -20,6 +22,11 @@ class HomeViewModel: ObservableObject {
 
     func loadPlayerList() {
         dataSource.loadProductList()
+    }
+
+    func productTapped(product: Product) {
+        selectedProduct = product
+        isSheetPresented = true
     }
 }
 
