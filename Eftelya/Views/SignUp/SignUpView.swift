@@ -10,50 +10,91 @@ import SwiftUI
 struct SignUpView: View {
 
     @StateObject private var viewModel = SignUpViewModel()
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         BackgroundView {
-            
+
             VStack(spacing: .zero) {
+                
+                Image(.logo)
+                    .resizable()
+                    .frame(width: 200, height: 200)
+
+                VStack(spacing: Spacing.spacing_4) {
+                    InputField(text: $viewModel.email, title:"Email Addres", placeHolder:"name@example.com")
+                        .autocapitalization(.none)
+
+                    InputField(text: $viewModel.fullName, title:"Full Name", placeHolder:"Enter your name")
+
+                    InputField(text: $viewModel.password, title:"Password", placeHolder:"Enter your password", isSecureField: true)
+
+                    ZStack(alignment: .trailing) {
+                        InputField(text: $viewModel.confirmPassword, title:"Confirm Password", placeHolder:"Confirm your password", isSecureField: true)
+                        if !viewModel.password.isEmpty && !viewModel.confirmPassword.isEmpty {
+                            if viewModel.password == viewModel.confirmPassword {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemGreen))
+                            } else {
+                                Image(systemName: "xmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemRed))
+                            }
+                        }
+                    }
+                }
+                .padding(.vertical, Spacing.spacing_2)
+
+                ButtonDS(title: "Sign Up") {
+                    Task {
+                        do {
+                            try await authViewModel.signUp(withEmail: viewModel.email, password: viewModel.password, fullName: viewModel.fullName)
+                        } catch {
+                            viewModel.showErrorAlert = true // Show the error alert when an error occurs during sign-up
+                        }
+                    }
+                }
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
 
                 Spacer()
 
-                HStack(spacing: .zero) {
-                    
-                    VStack(spacing: .zero) {
-                        InputText(text: "First Name")
-                        InputText(text: "Last Name")
-                        InputText(text: "Email")
-                        InputText(text: "Username")
-                        InputText(text: "Password")
+                Button {
+                    dismiss()
+                } label: {
+                    HStack(spacing: 3) {
+                        Text("Already have an account?")
+                        Text("Sign in")
+                            .fontWeight(.bold)
                     }
-                    .padding(.horizontal, Spacing.spacing_3)
-
-                    VStack(spacing: .zero) {
-                        TextFieldDS(placeholder: "First Name", binding: $viewModel.firstName)
-                        TextFieldDS(placeholder: "Last Name", binding: $viewModel.lastName)
-                        TextFieldDS(placeholder: "Email", binding: $viewModel.email)
-                        TextFieldDS(placeholder: "Username", binding: $viewModel.username)
-                        TextFieldDS(placeholder: "Password", binding: $viewModel.password)
-                    }
-                    .padding(.horizontal, Spacing.spacing_3)
-                }
-
-                Spacer()
-
-                ButtonDS(title: "Register") {
-                    viewModel.isRegisterActive = true
-                }
-                NavigationLink(
-                    destination: LoginView(),
-                    isActive: $viewModel.isRegisterActive
-                ) {
-                    EmptyView()
+                    .font(.system(size: 14))
                 }
             }
+            .padding(Spacing.spacing_4)
             .navigationTitle("Sign Up")
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
+        .alert(item: $authViewModel.error) { error in
+                    Alert(
+                        title: Text("Error"),
+                        message: Text(authViewModel.error?.message ?? ""),
+                        dismissButton: .default(Text("OK")) {
+                            authViewModel.error = nil // Reset the error
+                        }
+                    )
+        }
+    }
+}
+
+// MARK: - AuthenticationFormProtocol
+extension SignUpView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !viewModel.email.isEmpty && viewModel.email.contains("@") && !viewModel.password.isEmpty && viewModel.password.count > 5 && !viewModel.fullName.isEmpty && viewModel.confirmPassword == viewModel.password
     }
 }
 

@@ -17,7 +17,7 @@ struct ParagraphText: View {
 
     var body: some View {
         Text(text)
-            .padding(.horizontal, Spacing.spacing_5)
+            .padding(.horizontal, Spacing.spacing_3)
             .padding(.vertical, Spacing.spacing_2)
             .foregroundColor(.black)
     }

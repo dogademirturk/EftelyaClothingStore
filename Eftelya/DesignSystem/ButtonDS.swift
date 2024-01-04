@@ -30,7 +30,7 @@ struct ButtonDS: View {
                 .padding(.vertical, Spacing.spacing_2)
                 .overlay {
                     RoundedRectangle(cornerRadius: Radius.radius_4)
-                        .stroke(.brown, lineWidth: 2)
+                        .stroke(.appBrown, lineWidth: 2)
                 }
         }
         .padding(.vertical, Spacing.spacing_3)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InputText: View {
+struct MainText: View {
 
     private var text: String
 
@@ -23,5 +23,5 @@ struct InputText: View {
 }
 
 #Preview {
-    InputText(text: "Test")
+    MainText(text: "Test")
 }

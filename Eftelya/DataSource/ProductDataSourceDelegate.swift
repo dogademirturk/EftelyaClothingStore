@@ -10,4 +10,6 @@ import Foundation
 protocol ProductDataSourceDelegate {
 
     func productListLoaded(productList: [Product])
+
+    func categoryListLoaded(categoryList: [Category])
 }

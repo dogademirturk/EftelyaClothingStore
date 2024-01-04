@@ -37,4 +37,31 @@ struct ProductDataSource {
 
         dataTask.resume()
     }
+
+    func loadCategoryList() {
+
+        let session = URLSession.shared
+
+        guard let url = URL(string: "\(baseURL)/products/categories") else { return }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            guard let data else { return }
+            let decoder = JSONDecoder()
+            do {
+                let categories = try decoder.decode([String].self, from: data)
+                let categoryObjects = categories.map { Category(name: $0) }
+                DispatchQueue.main.async {
+                    delegate?.categoryListLoaded(categoryList: categoryObjects)
+                }
+            } catch {
+                print(error)
+            }
+        }
+
+        dataTask.resume()
+    }
 }
