@@ -18,9 +18,9 @@ struct SignUpView: View {
 
             VStack(spacing: .zero) {
 
-                Image(.logo)
+                Image(.logoWithoutText)
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 175, height: 175)
 
                 VStack(spacing: Spacing.spacing_4) {
                     InputField(text: $viewModel.email, title: "Email Addres", placeHolder: "name@example.com")
