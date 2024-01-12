@@ -64,6 +64,10 @@ struct LoginView: View {
                 .navigationTitle("Login")
                 .navigationBarHidden(true)
             }
+            .onTapGesture {
+                // Dismiss the keyboard by resigning first responder
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
             .alert(item: $authViewModel.error) { _ in
                         Alert(
                             title: Text("Error"),
