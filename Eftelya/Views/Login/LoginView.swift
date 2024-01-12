@@ -14,7 +14,9 @@ struct LoginView: View {
 
     var body: some View {
         NavigationStack {
-            BackgroundView {
+            ZStack {
+                Color.main
+                    .ignoresSafeArea()
 
                 VStack(spacing: .zero) {
 
@@ -66,7 +68,12 @@ struct LoginView: View {
             }
             .onTapGesture {
                 // Dismiss the keyboard by resigning first responder
-                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                UIApplication.shared.sendAction(
+                    #selector(UIResponder.resignFirstResponder),
+                    to: nil,
+                    from: nil,
+                    for: nil
+                )
             }
             .alert(item: $authViewModel.error) { _ in
                         Alert(

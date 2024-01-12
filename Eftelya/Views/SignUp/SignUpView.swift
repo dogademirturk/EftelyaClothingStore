@@ -14,7 +14,9 @@ struct SignUpView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
-        BackgroundView {
+        ZStack {
+            Color.main
+                .ignoresSafeArea()
 
             VStack(spacing: .zero) {
 
@@ -95,7 +97,12 @@ struct SignUpView: View {
         }
         .onTapGesture {
             // Dismiss the keyboard by resigning first responder
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            UIApplication.shared.sendAction(
+                #selector(UIResponder.resignFirstResponder),
+                to: nil,
+                from: nil,
+                for: nil
+            )
         }
         .alert(item: $authViewModel.error) { _ in
                     Alert(
