@@ -82,6 +82,7 @@ struct HomeView: View {
                         }
                         .background(Color.main)
                         .scrollContentBackground(.hidden)
+                        .preferredColorScheme(.light)
                     }
                 }
             }

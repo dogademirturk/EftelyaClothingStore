@@ -23,9 +23,11 @@ struct InputField: View {
             if isSecureField {
                 SecureField(placeHolder, text: $text)
                     .font(.system(size: 14))
+                    .preferredColorScheme(.light)
             } else {
                 TextField(placeHolder, text: $text)
                     .font(.system(size: 14))
+                    .preferredColorScheme(.light)
             }
 
             Divider()
